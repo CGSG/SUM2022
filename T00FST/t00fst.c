@@ -10,5 +10,6 @@ void main( void )
   printf("Input X:");
   scanf("%d", &x);
   sprintf(Buf, "X = %d\nFirst attempt", x);
-  MessageBox(NULL, Buf, "T00FST", MB_OK | MB_ICONEXCLAMATION);
+  if (MessageBox(NULL, Buf, "T00FST", MB_YESNO | MB_ICONEXCLAMATION) == IDYES)
+    MessageBox(NULL, "Pressed 'Yes'", "T00FST", MB_OK | MB_ICONINFORMATION);
 }
